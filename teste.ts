@@ -24,24 +24,6 @@ class Grafo {
 
     this.listaDeAdjacencia.get(vertice1)!.push(vertice2); // Adicione vertice2 à lista de vizinhos de vertice1.
   }
-
-//   buscaEmProfundidade(verticeInicial: string, visitados: Set<string> = new Set()) {
-//     // Execute a busca em profundidade a partir de um vértice de partida.
-//     if (!this.listaDeAdjacencia.has(verticeInicial)) {
-//       // Verifique se o vértice de partida existe no grafo.
-//       throw new Error("O vértice inicial deve existir no grafo.");
-//     }
-
-//     visitados.add(verticeInicial); // Marque o vértice atual como visitado.
-//     console.log(verticeInicial); // Imprima o vértice atual.
-
-//     for (const vizinho of this.listaDeAdjacencia.get(verticeInicial)!) {
-//       // Para cada vizinho não visitado do vértice atual.
-//       if (!visitados.has(vizinho)) {
-//         this.buscaEmProfundidade(vizinho, visitados); // Chame a função de busca em profundidade recursivamente no vizinho não visitado.
-//       }
-//     }
-//   }
   
 }
 

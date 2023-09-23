@@ -43,6 +43,8 @@ class Grafo {
       }
       console.log("\n");
     }
+
+    
   }
   
   // Exemplo de uso
@@ -147,7 +149,7 @@ class Grafo {
   grafo.addAresta("Estruturas de Dados 1", "Compiladores 1");
   grafo.addAresta("Estruturas de Dados 1", "Estruturas de Dados 2");
   grafo.addAresta("Estruturas de Dados 1", "Projeto e Análise de Algoritmos");
-  grafo.addAresta("Fundamentos de Redes de Computadores", "Fundamentos de Sistemas Operacionais");
+  grafo.addAresta("Fundamentos de Arquiteturas de Computadores", "Fundamentos de Sistemas Operacionais");
   grafo.addAresta("Matemática Discreta 2", "Sistemas de Banco de Dados 1");
   grafo.addAresta("Projeto Integrador de Engenharia 1", "Projeto Integrador de Engenharia 2");
   
@@ -171,9 +173,13 @@ class Grafo {
 
   //Semestre 9
   grafo.addAresta("Trabalho de Conclusão do Curso 1", "Trabalho de Conclusão do Curso 2");
-
-  console.log("Grafo resultante:");
-  console.log(grafo);
+  
+  // console.log("Grafo resultante:");
+  // console.log(grafo);
   
   console.log("O fluxo de MDS corresponde a:");
   grafo.dfs("Métodos de Desenvolvimento de Software");
+
+  
+
+  

@@ -125,7 +125,7 @@ grafo.addAresta("Métodos de Desenvolvimento de Software", "Testes de Software")
 grafo.addAresta("Estruturas de Dados 1", "Compiladores 1");
 grafo.addAresta("Estruturas de Dados 1", "Estruturas de Dados 2");
 grafo.addAresta("Estruturas de Dados 1", "Projeto e Análise de Algoritmos");
-grafo.addAresta("Fundamentos de Redes de Computadores", "Fundamentos de Sistemas Operacionais");
+grafo.addAresta("Fundamentos de Arquiteturas de Computadores", "Fundamentos de Sistemas Operacionais");
 grafo.addAresta("Matemática Discreta 2", "Sistemas de Banco de Dados 1");
 grafo.addAresta("Projeto Integrador de Engenharia 1", "Projeto Integrador de Engenharia 2");
 //Semestre 5

@@ -1,6 +1,6 @@
 # Nome do Projeto
 
-## Grafos 1 - Busca em Profundidade (DFS)
+## Grafos 1 - Tipos de Busca: Busca em Largura e Busca em Profundidade (DFS)
 
 ## 👥 Alunos
 

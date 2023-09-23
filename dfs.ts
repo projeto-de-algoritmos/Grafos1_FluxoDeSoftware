@@ -44,52 +44,6 @@ class Grafo {
       console.log("\n");
     }
 
-    bfs(verticeInicial: string, verticeDestino: string) {
-      if (!this.listaDeAdjacencia.has(verticeInicial) || !this.listaDeAdjacencia.has(verticeDestino)) {
-        throw new Error("Vértices inicial e de destino devem existir no grafo.");
-      }
-
-      const visitados: Set<string> = new Set();
-      const fila: string[] = [];
-      const predecessores: Map<string, string | null> = new Map();
-
-      fila.push(verticeInicial);
-      visitados.add(verticeInicial);
-      predecessores.set(verticeInicial, null);
-
-      while (fila.length > 0) {
-        const verticeAtual = fila.shift()!;
-
-        if (verticeAtual === verticeDestino) {
-          // O destino foi alcançado, construa o caminho e saia do loop.
-          const caminho = this.construirCaminho(predecessores, verticeInicial, verticeDestino);
-          console.log(`Caminho de '${verticeInicial}' para '${verticeDestino}': ${caminho.join(' -> ')}`);
-          return;
-        }
-
-        for (const vizinho of this.listaDeAdjacencia.get(verticeAtual)!) {
-          if (!visitados.has(vizinho)) {
-            visitados.add(vizinho);
-            fila.push(vizinho);
-            predecessores.set(vizinho, verticeAtual);
-          }
-        }
-      }
-
-      console.log(`Não foi possível encontrar um caminho de '${verticeInicial}' para '${verticeDestino}'.`);
-    }
-
-    private construirCaminho(predecessores: Map<string, string | null>, inicio: string, fim: string): string[] {
-      const caminho: string[] = [];
-      let verticeAtual = fim;
-
-      while (verticeAtual !== null) {
-        caminho.unshift(verticeAtual);
-        verticeAtual = predecessores.get(verticeAtual)!;
-      }
-
-      return caminho;
-    }
     
   }
   
@@ -226,7 +180,6 @@ class Grafo {
   console.log("O fluxo de MDS corresponde a:");
   grafo.dfs("Métodos de Desenvolvimento de Software");
 
-  console.log("Caminho partindo de MDS e indo até TPPE':");
-  grafo.bfs("Métodos de Desenvolvimento de Software", "Técnicas de Programação em Plataformas Emergentes");
+  
 
   

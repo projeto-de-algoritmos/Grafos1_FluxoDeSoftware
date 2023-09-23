@@ -11,7 +11,7 @@
  
  ##  💻 Visão Geral
 
-<p> O projeto a seguir tem como intuito facilitar a vida dos estudantes do curso de Engenharia de Software da Universidade de Brasília. Por diversas vezes, percebe-se que os alunos encontram dificuldades de entender qual o fluxo de matérias específico de uma denominada "cadeia" (sequências de disciplinas que vão desbloqueando as seguintes), ou até mesmo entender quais precisam cursar para chegar em um determinado ponto desejado. Nesse sentido, pensou-se no desenvolvimento de uma pequena aplicação em que, selecionando a matéria pretendida como ponto de partida, e - caso seja de sua vontade - a matéria cogitada como ponto de chegada, os estudantes possam descobrir quais sequências precisam cursar para alcançarem suas metas. </p>
+<p> O projeto a seguir tem como intuito facilitar a vida dos estudantes do curso de Engenharia de Software da Universidade de Brasília. Por diversas vezes, percebe-se que os alunos encontram dificuldades de entender qual o fluxo de matérias específico de uma denominada "cadeia" (sequências de disciplinas que vão desbloqueando as seguintes). Nesse sentido, pensou-se no desenvolvimento de uma pequena aplicação em que, selecionando a matéria pretendida como ponto de partida, os estudantes possam descobrir quais sequências precisam cursar para alcançarem suas metas. </p>
 
 - Para a criação do projeto, foram utilizados como base, tanto o site oficial do  [SIGAA](https://sigaa.unb.br/sigaa/graduacao/componente/lista.jsf), quanto o fluxo atualizado oficial de engenharia de software disponibilizado pela UnB:
 

@@ -2,7 +2,7 @@
 
 ## Grafos 1 - Busca em Profundidade (DFS)
 
-## Alunos
+## 👥 Alunos
 
 | Matrícula | Aluno                                                      |
 | --------- | ---------------------------------------------------------- |
@@ -18,9 +18,9 @@
 ![image](https://github.com/projeto-de-algoritmos/Grafos1_FluxoDeSoftware/assets/54143767/bfb9e0ac-59bf-469d-b762-22ccf1d7f2c4)
 
 
-## Execução do Projeto
+## ➿ Execução do Projeto
 
-## Pré-Requisitos 
+### ⚠️ Pré-Requisitos 
 
 Tabela de ferramentas necessárias para rodar o projeto, com as versões recomendadas.
 
@@ -32,41 +32,41 @@ Tabela de ferramentas necessárias para rodar o projeto, com as versões recomen
 | Javascript | - | Acompanhado do node |
 
 
-## Executando o Projeto
+### 🔂 Executando o Projeto
 
-### Clone o repositório
+#### Clone o repositório
 
 ```bash 
 $ git clone https://github.com/projeto-de-algoritmos/Grafos1_FluxoDeSoftware.git
 ```
 
-### Instale as dependências do projeto
+#### Instale as dependências do projeto
 
 ```bash 
 $ npm install -g typescript
 ```
 
-### Verifique se o typescript foi instalando utilizando o comando abaixo
+#### Verifique se o typescript foi instalando utilizando o comando abaixo
 
 ```bash 
 $ tsc --version
 ```
 
-### Compile o arquivo typescript do projeto 
+#### Compile o arquivo typescript do projeto 
 
 ```bash 
 $ tsc teste.ts
 ```
-### Execute o arquivo javascript resultante 
+#### Execute o arquivo javascript resultante 
 
 ```bash 
 $ node teste.js
 ```
 
-## Utilização do projeto
+## ✔️ Utilização do projeto
 Para utilização do projeo acesse a página e selecione a matéria desejada para sua busca. Caso queira especificar ainda mais, selecione a matéria final que deseja desenhar o fluxo.
 
-## Apresentação
+## 🔗 Apresentação
 
   | Conteúdo | Vídeo                                                                                         |
   | -------- | --------------------------------------------------------------------------------------------- |

@@ -1,6 +1,6 @@
-# Nome do Projeto
+# Mergulhando nas Profundezas da Engenharia de Software
 
-## Grafos 1 - Tipos de Busca: Busca em Largura e Busca em Profundidade (DFS)
+## Grafos 1 - Busca em Profundidade (DFS)
 
 ## 👥 Alunos
 
@@ -55,12 +55,12 @@ $ tsc --version
 #### Compile o arquivo typescript do projeto 
 
 ```bash 
-$ tsc teste.ts
+$ tsc dfs.ts
 ```
 #### Execute o arquivo javascript resultante 
 
 ```bash 
-$ node teste.js
+$ node dfs.js
 ```
 
 ## ✔️ Utilização do projeto

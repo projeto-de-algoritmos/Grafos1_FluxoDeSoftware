@@ -73,9 +73,11 @@ grafo.adicionarVertice("Programação para Sistemas Paralelos e Distribuídos");
 //Semestre 8
 grafo.adicionarVertice("Engenharia de Produto de Software");
 grafo.adicionarVertice("Gerência e Configuração de Evolução de Software");
-grafo.adicionarVertice("Projeto Integrador de Engenharia 2");
+grafo.adicionarVertice("Estágio Supervisionado");
 //Semestre 9
 grafo.adicionarVertice("Trabalho de Conclusão do Curso 1");
+grafo.adicionarVertice("Projeto Integrador de Engenharia 2");
+//Semestre 10
 grafo.adicionarVertice("Trabalho de Conclusão do Curso 2");
 // Adicione arestas ao grafo.
 //Semestre 1
@@ -107,6 +109,7 @@ grafo.adicionarAresta("Estruturas de Dados 1", "Estruturas de Dados 2");
 grafo.adicionarAresta("Estruturas de Dados 1", "Projeto e Análise de Algoritmos");
 grafo.adicionarAresta("Fundamentos de Redes de Computadores", "Fundamentos de Sistemas Operacionais");
 grafo.adicionarAresta("Matemática Discreta 2", "Sistemas de Banco de Dados 1");
+grafo.adicionarAresta("Projeto Integrador de Engenharia 1", "Projeto Integrador de Engenharia 2");
 //Semestre 5
 grafo.adicionarAresta("Interação Humano Computador", "Qualidade de Software 1");
 grafo.adicionarAresta("Requisitos de Software", "Arquitetura e Desenho de Software");
@@ -115,7 +118,15 @@ grafo.adicionarAresta("Fundamentos de Sistemas Operacionais", "Fundamentos de Re
 grafo.adicionarAresta("Fundamentos de Sistemas Operacionais", "Fundamentos de Sistemas Embarcados");
 grafo.adicionarAresta("Compiladores 1", "Paradigmas de Programação");
 grafo.adicionarAresta("Estruturas de Dados 2", "Programação para Sistemas Paralelos e Distribuídos");
-//grafo.adicionarAresta("C1", "C2");
+//Semestre 6
+grafo.adicionarAresta("Testes de Software", "Técnicas de Programação em Plataformas Emergentes");
+grafo.adicionarAresta("Testes de Software", "Gerência e Configuração de Evolução de Software");
+grafo.adicionarAresta("Arquitetura e Desenho de Software", "Técnicas de Programação em Plataformas Emergentes");
+grafo.adicionarAresta("Fundamentos de Redes de Computadores", "Programação para Sistemas Paralelos e Distribuídos");
+//Semestre 7
+grafo.adicionarAresta("Técnicas de Programação em Plataformas Emergentes", "Engenharia de Produto de Software");
+//Semestre 9
+grafo.adicionarAresta("Trabalho de Conclusão do Curso 1", "Trabalho de Conclusão do Curso 2");
 console.log("Grafo resultante:");
 console.log(grafo);
 // console.log("Busca em profundidade a partir do vértice 'C1':");

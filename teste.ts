@@ -1,6 +1,6 @@
 class Grafo {
-    // Crie uma classe Grafo para representar o grafo
-    private listaDeAdjacencia: Map<string, string[]>; // Crie uma lista de adjacência privada usando um mapa onde as chaves são os vértices (strings) e os valores são listas de vértices vizinhos.
+    // Cria uma classe Grafo para representar o grafo
+    private listaDeAdjacencia: Map<string, string[]>; // Cria uma lista de adjacência privada usando um mapa onde as chaves são os vértices (strings) e os valores são listas de vértices vizinhos.
   
     constructor() {
       // O construtor inicializa a lista de adjacência como um novo mapa vazio.
@@ -8,21 +8,21 @@ class Grafo {
     }
   
     adicionarVertice(vertice: string) {
-      // Adicione um vértice ao grafo.
+      // Adiciona um vértice ao grafo.
       if (!this.listaDeAdjacencia.has(vertice)) {
-        // Verifique se o vértice já existe na lista de adjacência.
-        this.listaDeAdjacencia.set(vertice, []); // Se não existir, crie uma entrada com uma lista vazia de vizinhos.
+        // Verifica se o vértice já existe na lista de adjacência.
+        this.listaDeAdjacencia.set(vertice, []); // Se não existir, cria uma entrada com uma lista vazia de vizinhos.
       }
     }
   
     adicionarAresta(vertice1: string, vertice2: string) {
-      // Adicione uma aresta entre dois vértices.
+      // Adiciona uma aresta entre dois vértices.
       if (!this.listaDeAdjacencia.has(vertice1) || !this.listaDeAdjacencia.has(vertice2)) {
-        // Verifique se ambos os vértices existem na lista de adjacência.
+        // Verifica se ambos os vértices existem na lista de adjacência.
         throw new Error("Vértices devem existir no grafo.");
       }
   
-      this.listaDeAdjacencia.get(vertice1)!.push(vertice2); // Adicione vertice2 à lista de vizinhos de vertice1.
+      this.listaDeAdjacencia.get(vertice1)!.push(vertice2); // Adiciona vertice2 à lista de vizinhos de vertice1.
     }
     
   }
@@ -30,7 +30,7 @@ class Grafo {
   // Exemplo de uso
   const grafo = new Grafo();
   
-  // Adicione vértices ao grafo.
+  // Adiciona vértices ao grafo.
   //Semestre 1
   grafo.adicionarVertice("Cálculo 1");
   grafo.adicionarVertice("Algoritmo de Programação de Computadores");
@@ -88,14 +88,17 @@ class Grafo {
   //Semestre 8
   grafo.adicionarVertice("Engenharia de Produto de Software");
   grafo.adicionarVertice("Gerência e Configuração de Evolução de Software");
-  grafo.adicionarVertice("Projeto Integrador de Engenharia 2");
+  grafo.adicionarVertice("Estágio Supervisionado");
   
   //Semestre 9
   grafo.adicionarVertice("Trabalho de Conclusão do Curso 1");
+  grafo.adicionarVertice("Projeto Integrador de Engenharia 2");
+
+  //Semestre 10
   grafo.adicionarVertice("Trabalho de Conclusão do Curso 2");
   
   
-  // Adicione arestas ao grafo.
+  // Adiciona arestas ao grafo.
   //Semestre 1
   grafo.adicionarAresta("Cálculo 1", "Cálculo 2");
   grafo.adicionarAresta("Cálculo 1", "Probabilidade e Estatística Aplicada à Engenharia");
@@ -128,6 +131,7 @@ class Grafo {
   grafo.adicionarAresta("Estruturas de Dados 1", "Projeto e Análise de Algoritmos");
   grafo.adicionarAresta("Fundamentos de Redes de Computadores", "Fundamentos de Sistemas Operacionais");
   grafo.adicionarAresta("Matemática Discreta 2", "Sistemas de Banco de Dados 1");
+  grafo.adicionarAresta("Projeto Integrador de Engenharia 1", "Projeto Integrador de Engenharia 2");
   
   //Semestre 5
   grafo.adicionarAresta("Interação Humano Computador", "Qualidade de Software 1");
@@ -138,7 +142,18 @@ class Grafo {
   grafo.adicionarAresta("Compiladores 1", "Paradigmas de Programação");
   grafo.adicionarAresta("Estruturas de Dados 2", "Programação para Sistemas Paralelos e Distribuídos");
   
-  //grafo.adicionarAresta("C1", "C2");
+  //Semestre 6
+  grafo.adicionarAresta("Testes de Software", "Técnicas de Programação em Plataformas Emergentes");
+  grafo.adicionarAresta("Testes de Software", "Gerência e Configuração de Evolução de Software");
+  grafo.adicionarAresta("Arquitetura e Desenho de Software", "Técnicas de Programação em Plataformas Emergentes");
+  grafo.adicionarAresta("Fundamentos de Redes de Computadores", "Programação para Sistemas Paralelos e Distribuídos");
+
+  //Semestre 7
+  grafo.adicionarAresta("Técnicas de Programação em Plataformas Emergentes", "Engenharia de Produto de Software");
+
+  //Semestre 9
+  grafo.adicionarAresta("Trabalho de Conclusão do Curso 1", "Trabalho de Conclusão do Curso 2");
+
   console.log("Grafo resultante:");
   console.log(grafo);
   

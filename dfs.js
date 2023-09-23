@@ -36,26 +36,6 @@ var Grafo = /** @class */ (function () {
         }
         console.log("\n");
     };
-    Grafo.prototype.bfsAPartirDe = function (verticeInicial) {
-        if (!this.listaDeAdjacencia.has(verticeInicial)) {
-            throw new Error("O vértice inicial deve existir no grafo.");
-        }
-        var visitados = new Set();
-        var fila = [];
-        fila.push(verticeInicial);
-        visitados.add(verticeInicial);
-        while (fila.length > 0) {
-            var verticeAtual = fila.shift();
-            console.log(verticeAtual); // Imprime o vértice visitado.
-            for (var _i = 0, _a = this.listaDeAdjacencia.get(verticeAtual); _i < _a.length; _i++) {
-                var vizinho = _a[_i];
-                if (!visitados.has(vizinho)) {
-                    visitados.add(vizinho);
-                    fila.push(vizinho);
-                }
-            }
-        }
-    };
     Grafo.prototype.bfs = function (verticeInicial, verticeDestino) {
         if (!this.listaDeAdjacencia.has(verticeInicial) || !this.listaDeAdjacencia.has(verticeDestino)) {
             throw new Error("Vértices inicial e de destino devem existir no grafo.");
@@ -206,6 +186,6 @@ grafo.addAresta("Trabalho de Conclusão do Curso 1", "Trabalho de Conclusão do 
 // console.log("Grafo resultante:");
 // console.log(grafo);
 console.log("O fluxo de MDS corresponde a:");
-grafo.bfsAPartirDe("Métodos de Desenvolvimento de Software");
-console.log("O fluxo de MDS até EPS é:");
-grafo.bfs("Métodos de Desenvolvimento de Software", "Engenharia de Produto de Software");
+grafo.dfs("Métodos de Desenvolvimento de Software");
+console.log("Caminho partindo de MDS e indo até TPPE':");
+grafo.bfs("Métodos de Desenvolvimento de Software", "Técnicas de Programação em Plataformas Emergentes");

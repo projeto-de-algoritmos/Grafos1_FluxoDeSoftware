@@ -1,0 +1,70 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* BodyComponent.css */
+.body {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.centered-text {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+/* SelectField.css */
+.custom-select {
+  width: 25%; /* Define a largura para 100% (para torná-lo mais largo) */
+  border: 1px solid #000; /* Borda mais fina e cor azul */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 10px; /* Espaçamento interno */
+  font-size: 16px; /* Tamanho da fonte */
+  margin-top: 10px; 
+}
+
+.rounded-box {
+  width: 80%; /* Define a largura para 100% (para torná-lo mais largo) */
+  border: 2px solid black; /* Cor da borda preta */
+  border-radius: 8px; /* Bordas arredondadas */
+  padding: 130px; /* Espaçamento interno */
+  margin-top: 50px; /* Espaçamento superior maior para afastar da borda de tela */
+  text-align: center;
+  margin-left: auto; /* Centraliza horizontalmente */
+  margin-right: auto; /* Centraliza horizontalmente */
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

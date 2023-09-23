@@ -8,6 +8,8 @@ const HeaderComponent = () => {
     padding: '20px',            // Espaçamento interno
     color: 'white',             // Cor do texto
     textAlign: 'center',        // Alinhamento do texto
+    fontFamily: 'Jockey One', // Família da Fonte
+    fontSize: 22, //tamanho do texto
   };
 
   return (

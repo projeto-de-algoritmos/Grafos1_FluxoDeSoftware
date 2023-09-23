@@ -36,44 +36,6 @@ var Grafo = /** @class */ (function () {
         }
         console.log("\n");
     };
-    Grafo.prototype.bfs = function (verticeInicial, verticeDestino) {
-        if (!this.listaDeAdjacencia.has(verticeInicial) || !this.listaDeAdjacencia.has(verticeDestino)) {
-            throw new Error("Vértices inicial e de destino devem existir no grafo.");
-        }
-        var visitados = new Set();
-        var fila = [];
-        var predecessores = new Map();
-        fila.push(verticeInicial);
-        visitados.add(verticeInicial);
-        predecessores.set(verticeInicial, null);
-        while (fila.length > 0) {
-            var verticeAtual = fila.shift();
-            if (verticeAtual === verticeDestino) {
-                // O destino foi alcançado, construa o caminho e saia do loop.
-                var caminho = this.construirCaminho(predecessores, verticeInicial, verticeDestino);
-                console.log("Caminho de '".concat(verticeInicial, "' para '").concat(verticeDestino, "': ").concat(caminho.join(' -> ')));
-                return;
-            }
-            for (var _i = 0, _a = this.listaDeAdjacencia.get(verticeAtual); _i < _a.length; _i++) {
-                var vizinho = _a[_i];
-                if (!visitados.has(vizinho)) {
-                    visitados.add(vizinho);
-                    fila.push(vizinho);
-                    predecessores.set(vizinho, verticeAtual);
-                }
-            }
-        }
-        console.log("N\u00E3o foi poss\u00EDvel encontrar um caminho de '".concat(verticeInicial, "' para '").concat(verticeDestino, "'."));
-    };
-    Grafo.prototype.construirCaminho = function (predecessores, inicio, fim) {
-        var caminho = [];
-        var verticeAtual = fim;
-        while (verticeAtual !== null) {
-            caminho.unshift(verticeAtual);
-            verticeAtual = predecessores.get(verticeAtual);
-        }
-        return caminho;
-    };
     return Grafo;
 }());
 // Exemplo de uso
@@ -163,7 +125,7 @@ grafo.addAresta("Métodos de Desenvolvimento de Software", "Testes de Software")
 grafo.addAresta("Estruturas de Dados 1", "Compiladores 1");
 grafo.addAresta("Estruturas de Dados 1", "Estruturas de Dados 2");
 grafo.addAresta("Estruturas de Dados 1", "Projeto e Análise de Algoritmos");
-grafo.addAresta("Fundamentos de Redes de Computadores", "Fundamentos de Sistemas Operacionais");
+grafo.addAresta("Fundamentos de Arquiteturas de Computadores", "Fundamentos de Sistemas Operacionais");
 grafo.addAresta("Matemática Discreta 2", "Sistemas de Banco de Dados 1");
 grafo.addAresta("Projeto Integrador de Engenharia 1", "Projeto Integrador de Engenharia 2");
 //Semestre 5
@@ -187,5 +149,3 @@ grafo.addAresta("Trabalho de Conclusão do Curso 1", "Trabalho de Conclusão do 
 // console.log(grafo);
 console.log("O fluxo de MDS corresponde a:");
 grafo.dfs("Métodos de Desenvolvimento de Software");
-console.log("Caminho partindo de MDS e indo até TPPE':");
-grafo.bfs("Métodos de Desenvolvimento de Software", "Técnicas de Programação em Plataformas Emergentes");

@@ -4,25 +4,43 @@ var Grafo = /** @class */ (function () {
         this.listaDeAdjacencia = new Map();
     }
     Grafo.prototype.adicionarVertice = function (vertice) {
-        // Adicione um vértice ao grafo.
+        // Adiciona um vértice ao grafo.
         if (!this.listaDeAdjacencia.has(vertice)) {
-            // Verifique se o vértice já existe na lista de adjacência.
-            this.listaDeAdjacencia.set(vertice, []); // Se não existir, crie uma entrada com uma lista vazia de vizinhos.
+            // Verifica se o vértice já existe na lista de adjacência.
+            this.listaDeAdjacencia.set(vertice, []); // Se não existir, cria uma entrada com uma lista vazia de vizinhos.
         }
     };
     Grafo.prototype.adicionarAresta = function (vertice1, vertice2) {
-        // Adicione uma aresta entre dois vértices.
+        // Adiciona uma aresta entre dois vértices.
         if (!this.listaDeAdjacencia.has(vertice1) || !this.listaDeAdjacencia.has(vertice2)) {
-            // Verifique se ambos os vértices existem na lista de adjacência.
+            // Verifica se ambos os vértices existem na lista de adjacência.
             throw new Error("Vértices devem existir no grafo.");
         }
-        this.listaDeAdjacencia.get(vertice1).push(vertice2); // Adicione vertice2 à lista de vizinhos de vertice1.
+        this.listaDeAdjacencia.get(vertice1).push(vertice2); // Adiciona vertice2 à lista de vizinhos de vertice1.
+    };
+    Grafo.prototype.buscaEmProfundidade = function (verticeInicial, visitados) {
+        if (visitados === void 0) { visitados = new Set(); }
+        // ExecutA a busca em profundidade a partir de um vértice de partida.
+        if (!this.listaDeAdjacencia.has(verticeInicial)) {
+            // Verifica se o vértice de partida existe no grafo.
+            throw new Error("O vértice inicial deve existir no grafo.");
+        }
+        visitados.add(verticeInicial); // Marca o vértice atual como visitado.
+        console.log(verticeInicial); // Imprime o vértice atual.
+        for (var _i = 0, _a = this.listaDeAdjacencia.get(verticeInicial); _i < _a.length; _i++) {
+            var vizinho = _a[_i];
+            // Para cada vizinho não visitado do vértice atual.
+            if (!visitados.has(vizinho)) {
+                this.buscaEmProfundidade(vizinho, visitados); // Chama a função de busca em profundidade recursivamente no vizinho não visitado.
+            }
+        }
+        console.log("\n");
     };
     return Grafo;
 }());
 // Exemplo de uso
 var grafo = new Grafo();
-// Adicione vértices ao grafo.
+// Adiciona vértices ao grafo.
 //Semestre 1
 grafo.adicionarVertice("Cálculo 1");
 grafo.adicionarVertice("Algoritmo de Programação de Computadores");
@@ -79,7 +97,7 @@ grafo.adicionarVertice("Trabalho de Conclusão do Curso 1");
 grafo.adicionarVertice("Projeto Integrador de Engenharia 2");
 //Semestre 10
 grafo.adicionarVertice("Trabalho de Conclusão do Curso 2");
-// Adicione arestas ao grafo.
+// Adiciona arestas ao grafo.
 //Semestre 1
 grafo.adicionarAresta("Cálculo 1", "Cálculo 2");
 grafo.adicionarAresta("Cálculo 1", "Probabilidade e Estatística Aplicada à Engenharia");
@@ -127,7 +145,7 @@ grafo.adicionarAresta("Fundamentos de Redes de Computadores", "Programação par
 grafo.adicionarAresta("Técnicas de Programação em Plataformas Emergentes", "Engenharia de Produto de Software");
 //Semestre 9
 grafo.adicionarAresta("Trabalho de Conclusão do Curso 1", "Trabalho de Conclusão do Curso 2");
-console.log("Grafo resultante:");
-console.log(grafo);
-// console.log("Busca em profundidade a partir do vértice 'C1':");
-//grafo.buscaEmProfundidade("C1"); // Execute a busca em profundidade a partir do vértice 'C1' e imprima os vértices visitados.
+// console.log("Grafo resultante:");
+// console.log(grafo);
+console.log("O fluxo de MDS corresponde a:");
+grafo.buscaEmProfundidade("Métodos de Desenvolvimento de Software");

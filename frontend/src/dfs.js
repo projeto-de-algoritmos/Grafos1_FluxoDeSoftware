@@ -37,8 +37,14 @@ class Grafo {
       }
       console.log("\n");
     }
+    getVertices() {
+        return Array.from(this.listaDeAdjacencia.keys());
+    }
+
   }
-  
+  function obterVerticesDoGrafo(grafo) {
+    return grafo.getVertices();
+  }
 
   // Exemplo de uso
   const grafo = new Grafo();

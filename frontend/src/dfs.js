@@ -20,30 +20,36 @@ class Grafo {
       this.listaDeAdjacencia.get(primeiroNo).push(segundoNo); // Adiciona vertice2 à lista de vizinhos de vertice1.
     }
   
-    dfs(noDePartida, visitados = new Set()) { // Executa a busca em profundidade a partir de um nó de partida.
+    dfs(noDePartida, visitados = new Set(), path = []) {
       if (!this.listaDeAdjacencia.has(noDePartida)) {
-        // Verifica se o nó de partida existe no grafo.
         throw new Error("O nó de partida deve existir no grafo.");
       }
-  
-      visitados.add(noDePartida);// Marca o nó atual como visitado.
-      console.log(noDePartida);// Imprime o nó atual.
-  
-      for (const vizinho of this.listaDeAdjacencia.get(noDePartida)) {
-          // Para cada vizinho não visitado do nó atual.
-        if (!visitados.has(vizinho)) {
-          this.dfs(vizinho, visitados); // Chama a função de busca em profundidade recursivamente no vizinho não visitado.
+    
+      visitados.add(noDePartida);
+    
+      // Adicione o nó atual ao caminho.
+      path.push(noDePartida);
+    
+      if (this.listaDeAdjacencia.get(noDePartida).length === 0) {
+        // Se o nó atual não tiver vizinhos não visitados, imprima o caminho.
+        console.log(path.join(" -> "));
+      } else {
+        // Caso contrário, continue a busca em profundidade.
+        for (const vizinho of this.listaDeAdjacencia.get(noDePartida)) {
+          if (!visitados.has(vizinho)) {
+            this.dfs(vizinho, visitados, path);
+          }
         }
       }
-      console.log("\n");
-    }
+    
+      // Remova o nó atual do caminho ao retroceder na recursão.
+      path.pop();
+    }    
+    
     getVertices() {
         return Array.from(this.listaDeAdjacencia.keys());
     }
 
-  }
-  function obterVerticesDoGrafo(grafo) {
-    return grafo.getVertices();
   }
 
   // Exemplo de uso

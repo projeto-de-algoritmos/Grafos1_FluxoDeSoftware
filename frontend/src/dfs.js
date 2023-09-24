@@ -44,6 +44,8 @@ class Grafo {
     
       // Remova o nó atual do caminho ao retroceder na recursão.
       path.pop();
+
+      //return path;
     }    
     
     getVertices() {
@@ -182,7 +184,7 @@ class Grafo {
   // console.log("Grafo resultante:");
   // console.log(grafo);
   
-  console.log("O fluxo de MDS corresponde a:");
-  grafo.dfs("Métodos de Desenvolvimento de Software");
+  // console.log("O fluxo de MDS corresponde a:");
+  // grafo.dfs("Métodos de Desenvolvimento de Software");
 
   export default grafo;

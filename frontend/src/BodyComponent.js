@@ -31,9 +31,11 @@ const BodyComponent = () => {
 
       <select className="custom-select">
         {vertices.map((vertice, index) => (
+          <button>
           <option key={index} value={vertice}>
             {vertice}
           </option>
+          </button>
         ))}
       </select>
 

@@ -41,14 +41,14 @@ class Grafo {
     
       visitados.add(noDePartida);
     
-      // Adicione o nó atual ao caminho.
+      // Adiciona o nó atual ao caminho.
       path.push(noDePartida);
     
       if (this.listaDeAdjacencia.get(noDePartida).length === 0) {
-        // Se o nó atual não tiver vizinhos não visitados, retorne o caminho como uma string.
+        // Se o nó atual não tiver vizinhos não visitados, retorna o caminho como uma string.
         const caminho = path.join(" -> ");
-        path.pop(); // Remova o nó atual do caminho antes de retornar
-        return caminho + '\n'; // Adicione uma quebra de linha após o caminho
+        path.pop(); // Remove o nó atual do caminho antes de retornar
+        return caminho + '\n'; // Adiciona uma quebra de linha após o caminho
       } else {
         const caminhos = []; // Array para armazenar os caminhos encontrados
     
@@ -59,9 +59,9 @@ class Grafo {
           }
         }
     
-        // Não remova o nó atual do caminho, pois ainda pode ser parte de outros caminhos.
+        // Não remove o nó atual do caminho, ainda pode ser parte de outros caminhos.
     
-        return caminhos.join(''); // Use uma string vazia para separar os caminhos (cada caminho já tem uma quebra de linha)
+        return caminhos.join(''); // Usa uma string vazia para separar os caminhos (cada caminho já tem uma quebra de linha)
       }
     }
     
@@ -73,7 +73,6 @@ class Grafo {
 
   }
 
-  // Exemplo de uso
   const grafo = new Grafo();
 
    // Adiciona nós ao grafo.
@@ -199,11 +198,5 @@ class Grafo {
 
   //Semestre 9
   grafo.addAresta("Trabalho de Conclusão do Curso 1", "Trabalho de Conclusão do Curso 2");
-  
-  // console.log("Grafo resultante:");
-  // console.log(grafo);
-  
-  // console.log("O fluxo de MDS corresponde a:");
-  // grafo.dfs("Métodos de Desenvolvimento de Software");
 
   export default grafo;

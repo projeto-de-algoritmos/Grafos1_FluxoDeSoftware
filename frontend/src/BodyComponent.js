@@ -34,16 +34,16 @@ const BodyComponent = () => {
     // ...
   
     if (opcaoSelecionada) {
-      // Se uma opção estiver selecionada, chame a função grafo.dfs() com a opção selecionada
+      // Se uma opção estiver selecionada, chama a função grafo.dfs() com a opção selecionada
       const output = grafo.dfs(opcaoSelecionada);
   
-      // Atualize o estado com a estrutura de dados do grafo
+      // Atualiza o estado com a estrutura de dados do grafo
       setDfsOutput(output);
     } else {
-      // Se nenhuma opção estiver selecionada, exiba o grafo completo
-      const grafoCompleto = grafo.dfs(); // Chame grafo.dfs() sem argumentos para exibir o grafo completo
+      // Se nenhuma opção estiver selecionada, exibe o grafo completo
+      const grafoCompleto = grafo.dfs(); // Chama grafo.dfs() sem argumentos para exibir o grafo completo
   
-      // Atualize o estado com a estrutura de dados do grafo completo
+      // Atualiza o estado com a estrutura de dados do grafo completo
       setDfsOutput(grafoCompleto);
     }
   };

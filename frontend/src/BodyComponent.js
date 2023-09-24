@@ -9,7 +9,7 @@ const BodyComponent = () => {
   useEffect(() => {
     const grafoVertices = grafo.getVertices();
     setVertices(grafoVertices);
-  }, []);
+  }, []); 
 
   const p1Style = {
     color: '#020E7D',

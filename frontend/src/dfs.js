@@ -31,22 +31,27 @@ class Grafo {
       path.push(noDePartida);
     
       if (this.listaDeAdjacencia.get(noDePartida).length === 0) {
-        // Se o nó atual não tiver vizinhos não visitados, imprima o caminho.
-        console.log(path.join(" -> "));
+        // Se o nó atual não tiver vizinhos não visitados, retorne o caminho como uma string.
+        const caminho = path.join(" -> ");
+        path.pop(); // Remova o nó atual do caminho antes de retornar
+        return caminho + '\n'; // Adicione uma quebra de linha após o caminho
       } else {
-        // Caso contrário, continue a busca em profundidade.
+        const caminhos = []; // Array para armazenar os caminhos encontrados
+    
         for (const vizinho of this.listaDeAdjacencia.get(noDePartida)) {
           if (!visitados.has(vizinho)) {
-            this.dfs(vizinho, visitados, path);
+            const subcaminhos = this.dfs(vizinho, new Set(visitados), path.slice()); // Crie cópias para evitar efeitos colaterais
+            caminhos.push(...subcaminhos);
           }
         }
-      }
     
-      // Remova o nó atual do caminho ao retroceder na recursão.
-      path.pop();
-
-      //return path;
-    }    
+        // Não remova o nó atual do caminho, pois ainda pode ser parte de outros caminhos.
+    
+        return caminhos.join(''); // Use uma string vazia para separar os caminhos (cada caminho já tem uma quebra de linha)
+      }
+    }
+    
+        
     
     getVertices() {
         return Array.from(this.listaDeAdjacencia.keys());

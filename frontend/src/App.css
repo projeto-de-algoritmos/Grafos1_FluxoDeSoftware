@@ -55,9 +55,11 @@
   border-radius: 8px; /* Bordas arredondadas */
   padding: 130px; /* Espaçamento interno */
   margin-top: 50px; /* Espaçamento superior maior para afastar da borda de tela */
-  text-align: center;
+  text-align: auto;
   margin-left: auto; /* Centraliza horizontalmente */
   margin-right: auto; /* Centraliza horizontalmente */
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 /* Estilo do botão */

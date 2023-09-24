@@ -178,3 +178,5 @@ class Grafo {
   
   console.log("O fluxo de MDS corresponde a:");
   grafo.dfs("Métodos de Desenvolvimento de Software");
+
+  export default grafo;

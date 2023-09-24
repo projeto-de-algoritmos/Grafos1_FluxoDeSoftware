@@ -10,6 +10,7 @@ class Grafo {
         this.listaDeAdjacencia.set(no, []); // Se não existir, cria uma entrada com uma lista vazia de vizinhos.
       }
     }
+    
   
     addAresta(primeiroNo, segundoNo) { // Adiciona uma aresta entre dois nós.
      // Verifica se ambos os nós existem na lista de adjacência.
@@ -19,10 +20,23 @@ class Grafo {
   
       this.listaDeAdjacencia.get(primeiroNo).push(segundoNo); // Adiciona vertice2 à lista de vizinhos de vertice1.
     }
+
+    dfsGrafoInteiro() {
+      const todosVertices = Array.from(this.listaDeAdjacencia.keys()); // Obtém todos os vértices do grafo
+      const todosCaminhos = [];
+    
+      for (const vertice of todosVertices) {
+        const caminho = this.dfs(vertice, new Set(), []);
+        todosCaminhos.push(caminho);
+      }
+    
+      return todosCaminhos.join('\n'); // Retorna todos os caminhos separados por quebras de linha
+    }
+    
   
     dfs(noDePartida, visitados = new Set(), path = []) {
       if (!this.listaDeAdjacencia.has(noDePartida)) {
-        throw new Error("O nó de partida deve existir no grafo.");
+        return this.dfsGrafoInteiro();
       }
     
       visitados.add(noDePartida);

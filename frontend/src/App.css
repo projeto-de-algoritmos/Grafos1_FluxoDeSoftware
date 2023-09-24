@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -32,6 +33,7 @@
 .body {
   text-align: center;
   margin-top: 25px;
+  overflow: hidden;
 }
 
 .centered-text {
@@ -58,7 +60,7 @@
   text-align: auto;
   margin-left: auto; /* Centraliza horizontalmente */
   margin-right: auto; /* Centraliza horizontalmente */
-  max-height: 200px;
+  max-height: 100vh;
   overflow-y: auto;
 }
 
@@ -79,6 +81,17 @@
 .custom-button:hover {
   background-color: #0056b3; /* Cor de fundo alterada */
 }
+
+.graph {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  text-align: center; /* Centraliza o texto horizontalmente (opcional) */
+  height: 100%; /* Ocupa toda a altura do elemento pai (opcional) */
+}
+
+
 
 @keyframes App-logo-spin {
   from {

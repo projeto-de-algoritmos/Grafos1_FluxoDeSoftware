@@ -1,56 +1,49 @@
 class Grafo {
     // Cria uma classe Grafo para representar o grafo
-    private listaDeAdjacencia: Map<string, string[]>; // Cria uma lista de adjacência privada usando um mapa onde as chaves são os nós (strings) e os valores são listas de vértices vizinhos.
-  
     constructor() {
-      // O construtor inicializa a lista de adjacência como um novo mapa vazio.
-      this.listaDeAdjacencia = new Map();
+      this.listaDeAdjacencia = new Map(); // Cria uma lista de adjacência privada usando um mapa onde as chaves são os nós (strings) e os valores são listas de vértices vizinhos.
     }
   
-    addNo(no: string) {
-      // Adiciona um nó ao grafo.
-      if (!this.listaDeAdjacencia.has(no)) {
-        // Verifica se o nó já existe na lista de adjacência.
+    addNo(no) {
+    // Adiciona um nó ao grafo.
+      if (!this.listaDeAdjacencia.has(no)) { // Verifica se o nó já existe na lista de adjacência.
         this.listaDeAdjacencia.set(no, []); // Se não existir, cria uma entrada com uma lista vazia de vizinhos.
       }
     }
   
-    addAresta(primeiroNo: string, segundoNo: string) {
-      // Adiciona uma aresta entre dois nós.
+    addAresta(primeiroNo, segundoNo) { // Adiciona uma aresta entre dois nós.
+     // Verifica se ambos os nós existem na lista de adjacência.
       if (!this.listaDeAdjacencia.has(primeiroNo) || !this.listaDeAdjacencia.has(segundoNo)) {
-        // Verifica se ambos os nós existem na lista de adjacência.
         throw new Error("nós devem existir no grafo.");
       }
   
-      this.listaDeAdjacencia.get(primeiroNo)!.push(segundoNo); // Adiciona vertice2 à lista de vizinhos de vertice1.
+      this.listaDeAdjacencia.get(primeiroNo).push(segundoNo); // Adiciona vertice2 à lista de vizinhos de vertice1.
     }
-
-    dfs(noDePartida: string, visitados: Set<string> = new Set()) {
-      // Executa a busca em profundidade a partir de um nó de partida.
+  
+    dfs(noDePartida, visitados = new Set()) { // Executa a busca em profundidade a partir de um nó de partida.
       if (!this.listaDeAdjacencia.has(noDePartida)) {
         // Verifica se o nó de partida existe no grafo.
         throw new Error("O nó de partida deve existir no grafo.");
       }
   
-      visitados.add(noDePartida); // Marca o nó atual como visitado.
-      console.log(noDePartida); // Imprime o nó atual.
+      visitados.add(noDePartida);// Marca o nó atual como visitado.
+      console.log(noDePartida);// Imprime o nó atual.
   
-      for (const vizinho of this.listaDeAdjacencia.get(noDePartida)!) {
-        // Para cada vizinho não visitado do nó atual.
+      for (const vizinho of this.listaDeAdjacencia.get(noDePartida)) {
+          // Para cada vizinho não visitado do nó atual.
         if (!visitados.has(vizinho)) {
           this.dfs(vizinho, visitados); // Chama a função de busca em profundidade recursivamente no vizinho não visitado.
         }
       }
       console.log("\n");
     }
-
-    
   }
   
+
   // Exemplo de uso
   const grafo = new Grafo();
-  
-  // Adiciona nós ao grafo.
+
+   // Adiciona nós ao grafo.
   //Semestre 1
   grafo.addNo("Cálculo 1");
   grafo.addNo("Algoritmo de Programação de Computadores");
@@ -179,7 +172,3 @@ class Grafo {
   
   console.log("O fluxo de MDS corresponde a:");
   grafo.dfs("Métodos de Desenvolvimento de Software");
-
-  
-
-  

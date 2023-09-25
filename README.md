@@ -55,7 +55,26 @@ $ git clone https://github.com/projeto-de-algoritmos/Grafos1_FluxoDeSoftware.git
 #### Instale as dependências do projeto
 
 ```bash 
+$ npm i
+```
+
+#### Verifique se o react foi instalado
+
+```bash 
+$ npm list react
+```
+
+#### Se não, instale o react
+
+```bash 
 $ npm install react react-dom
+```
+
+#### Entre no caminho da pasta
+
+```bash
+$ cd .\Grafos1_FluxoDeSoftware
+$ cd .\frontend
 ```
 
 #### Execute o projeto 

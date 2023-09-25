@@ -15,8 +15,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background: linear-gradient(to bottom, #105013, #0e4581);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +25,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #0e4581;
 }
 
 /* BodyComponent.css */
@@ -36,25 +35,36 @@
   overflow: hidden;
 }
 
-.centered-text {
-  font-size: 20px;
-  margin: 10px 0;
+.centered-text1 {
+  font-family: 'Jockey One', sans-serif;
+  color: #020E7D;
+  font-size: 34px;
+  margin: 5px 0;
+}
+
+.centered-text2 {
+  font-family: 'Jockey One', sans-serif;
+  color: #105013;
+  font-size: 28px;
+  margin: 2px 0;
+
 }
 
 /* SelectField.css */
 .custom-select {
   width: 25%; /* Define a largura para 100% (para torná-lo mais largo) */
-  border: 1px solid #000; /* Borda mais fina e cor azul */
-  border-radius: 5px; /* Bordas arredondadas */
+  border: 2px solid #000; /* Borda mais fina e cor azul */
+  border-radius: 10px; /* Bordas arredondadas */
   padding: 10px; /* Espaçamento interno */
   font-size: 16px; /* Tamanho da fonte */
-  margin-top: 10px; 
+  margin-top: 10px;
+
 }
 
 .rounded-box {
   width: 80%; /* Define a largura para 100% (para torná-lo mais largo) */
   border: 2px solid black; /* Cor da borda preta */
-  border-radius: 8px; /* Bordas arredondadas */
+  border-radius: 15px; /* Bordas arredondadas */
   padding: 130px; /* Espaçamento interno */
   margin-top: 50px; /* Espaçamento superior maior para afastar da borda de tela */
   text-align: auto;
@@ -66,29 +76,45 @@
 
 /* Estilo do botão */
 .custom-button {
-  background-color: #629CDF; /* Cor de fundo */
+  background-color: #2065c0; /* Cor de fundo */
   color: #fff; /* Cor do texto */
   padding: 10px 20px; /* Espaçamento interno (altura x largura) */
   border: none; /* Sem borda */
-  border-radius: 5px; /* Cantos arredondados */
+  border-radius: 10px; /* Cantos arredondados */
   cursor: pointer; /* Cursor do mouse ao passar por cima */
   font-size: 16px; /* Tamanho da fonte */
   font-weight: bold; /* Negrito */
   margin-left: 10px;
+  box-shadow: #000;
+}
+
+/* Defina a animação */
+@keyframes animacaoBotao {
+  0% {
+    transform: scale(1); /* Começa com o tamanho original */
+  }
+  50% {
+    transform: scale(0.9); /* Cresce até 110% do tamanho original */
+  }
+  100% {
+    transform: scale(1); /* Retorna ao tamanho original */
+  }
 }
 
 /* Estilo do botão ao passar o mouse por cima */
 .custom-button:hover {
-  background-color: #0056b3; /* Cor de fundo alterada */
+  background-color: #0e4581; /* Cor de fundo alterada */
+  animation: animacaoBotao 1s ease-out; /* Nome da animação, duração e função de temporização */
 }
 
-.graph {
+.graph {  
   display: flex;
   flex-direction: column;
   align-items: center; /* Centraliza horizontalmente */
   justify-content: center; /* Centraliza verticalmente */
-  text-align: center; /* Centraliza o texto horizontalmente (opcional) */
+  text-align: center; /* Centraliza o texto horizontalmente (opcional) */ 
   height: 100%; /* Ocupa toda a altura do elemento pai (opcional) */
+
 }
 
 

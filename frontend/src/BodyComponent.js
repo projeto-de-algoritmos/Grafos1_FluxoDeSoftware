@@ -11,20 +11,8 @@ const BodyComponent = () => {
     const grafoVertices = grafo.getVertices();
     setVertices(grafoVertices);
   }, []); 
+  
 
-  const p1Style = {
-    color: '#020E7D',
-    textAlign: 'center',
-    fontFamily: 'Jockey One',
-    fontSize: 30,
-  };
-
-  const p2Style = {
-    color: '#105013',
-    textAlign: 'center',
-    fontFamily: 'Jockey One',
-    fontSize: 30,
-  };
 
   const handleSelectChange = (e) => {
     setOpcaoSelecionada(e.target.value);
@@ -52,8 +40,8 @@ const BodyComponent = () => {
 
   return (
     <div className="body">
-      <p style={p1Style} className="centered-text"><strong>Selecione a matéria de Software</strong></p>
-      <p style={p2Style} className="centered-text"><strong>que você deseja analisar a continuação do fluxo</strong></p>
+      <p className="centered-text1"><strong>Selecione a matéria de Software</strong></p>
+      <p  className="centered-text2"><strong>que você deseja analisar a continuação do fluxo</strong></p>
 
       <select className="custom-select" value={opcaoSelecionada} onChange={handleSelectChange}>
       <option value="">Fluxo Completo</option> {/* Opção padrão */}

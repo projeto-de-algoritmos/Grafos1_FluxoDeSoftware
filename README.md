@@ -17,6 +17,18 @@
 
 ![image](https://github.com/projeto-de-algoritmos/Grafos1_FluxoDeSoftware/assets/54143767/bfb9e0ac-59bf-469d-b762-22ccf1d7f2c4)
 
+### Interface: 
+![image](https://github.com/projeto-de-algoritmos/Grafos1_FluxoDeSoftware/assets/54143767/1435a362-7e36-43b8-997a-7a97facdc5a1)
+
+![image](https://github.com/projeto-de-algoritmos/Grafos1_FluxoDeSoftware/assets/54143767/b36cb130-2dd0-4f3a-81dc-85edcc27d02b)
+
+![image](https://github.com/projeto-de-algoritmos/Grafos1_FluxoDeSoftware/assets/54143767/3a161b61-b5cd-4ce7-8a18-10c47a03a92a)
+
+
+![image](https://github.com/projeto-de-algoritmos/Grafos1_FluxoDeSoftware/assets/54143767/c51e473c-288a-4b42-bbaf-77ba73e7b6a4)
+
+![image](https://github.com/projeto-de-algoritmos/Grafos1_FluxoDeSoftware/assets/54143767/f585f312-aaae-4718-a6cf-9b033fb359d5)
+
 
 ## ➿ Execução do Projeto
 
@@ -28,8 +40,8 @@ Tabela de ferramentas necessárias para rodar o projeto, com as versões recomen
 | :-------: | ----------- | -------------------------------------------------------- |
 | Node.Js | 18.16.0 | [Baixar instalador](https://nodejs.org/) |
 | Git | 2.40.1.windows.1 | [Baixar instalador](https://git-scm.com/) |
-| Typescript | 5.1.3 | npm install -g typescript |
 | Javascript | - | Acompanhado do node |
+| React | ^18.2.0 | npm install react react-dom |
 
 
 ### 🔂 Executando o Projeto
@@ -43,28 +55,17 @@ $ git clone https://github.com/projeto-de-algoritmos/Grafos1_FluxoDeSoftware.git
 #### Instale as dependências do projeto
 
 ```bash 
-$ npm install -g typescript
+$ npm install react react-dom
 ```
 
-#### Verifique se o typescript foi instalando utilizando o comando abaixo
+#### Execute o projeto 
 
 ```bash 
-$ tsc --version
-```
-
-#### Compile o arquivo typescript do projeto 
-
-```bash 
-$ tsc dfs.ts
-```
-#### Execute o arquivo javascript resultante 
-
-```bash 
-$ node dfs.js
+$ npm run start
 ```
 
 ## ✔️ Utilização do projeto
-Para utilização do projeo acesse a página e selecione a matéria desejada para sua busca. Caso queira especificar ainda mais, selecione a matéria final que deseja desenhar o fluxo.
+Para utilização do projeo acesse a página localmente, e selecione a matéria desejada para sua busca.
 
 ## 🔗 Apresentação
 

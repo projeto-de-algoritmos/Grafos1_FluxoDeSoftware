@@ -52,12 +52,6 @@ Tabela de ferramentas necessárias para rodar o projeto, com as versões recomen
 $ git clone https://github.com/projeto-de-algoritmos/Grafos1_FluxoDeSoftware.git
 ```
 
-#### Instale as dependências do projeto
-
-```bash 
-$ npm i
-```
-
 #### Verifique se o react foi instalado
 
 ```bash 
@@ -75,6 +69,12 @@ $ npm install react react-dom
 ```bash
 $ cd .\Grafos1_FluxoDeSoftware
 $ cd .\buscaEmProfundidade
+```
+
+#### Instale as dependências do projeto
+
+```bash 
+$ npm i
 ```
 
 #### Execute o projeto 

@@ -90,7 +90,7 @@ Para utilização do projeo acesse a página localmente, e selecione a matéria 
 
   | Conteúdo | Vídeo                                                                                         |
   | -------- | --------------------------------------------------------------------------------------------- |
-  | Módulo 1 | [Link](https://youtu.be/0V2m56cO-OI)                                                          |
+  | Módulo 1 | [Link](trabalho-1-projeto-de-algoritmos.mp4)                                                          |
  
 
   

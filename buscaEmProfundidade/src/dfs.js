@@ -66,7 +66,6 @@ class Grafo {
     }
     
         
-    
     getVertices() {
         return Array.from(this.listaDeAdjacencia.keys());
     }

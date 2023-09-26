@@ -74,7 +74,7 @@ $ npm install react react-dom
 
 ```bash
 $ cd .\Grafos1_FluxoDeSoftware
-$ cd .\frontend
+$ cd .\buscaEmProfundidade
 ```
 
 #### Execute o projeto 
